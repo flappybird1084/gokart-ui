@@ -17,4 +17,4 @@ async def websocket_endpoint(websocket: WebSocket):
         data = await websocket.receive_text()
         await websocket.send_text(f"Message text was: {data}")
         print("Received", data)
-        testmotor.set_power(float(data))
+        testmotor.set_power(float(data-0.25))
